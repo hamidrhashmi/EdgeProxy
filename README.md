@@ -15,5 +15,11 @@ aptitude install opensips-cli
 apt install opensips-mysql-module opensips-tls-module opensips-tls-openssl-module opensips-tlsmgm-module
 opensips-cli -x database create
 ```
-### STEP 3 Download and install Edge Proxy Configuration
+### STEP 3 Insert Nodes in Db to LoadBalance SIP Traffic
+Use the following frmat to add data in data 
+```sql
+insert into dispatcher (setid, destination, socket) values (2,'sip:node-ip:5060;transport=tcp','tcp:opensips-listening-socket:6060');
+```
+
+### STEP 4 Download and Configure EdgeProxy
 TODO
