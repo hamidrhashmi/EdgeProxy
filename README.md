@@ -12,7 +12,7 @@ echo "deb [signed-by=/usr/share/keyrings/opensips-org.gpg] https://apt.opensips.
 echo "deb [signed-by=/usr/share/keyrings/opensips-org.gpg] https://apt.opensips.org bookworm cli-nightly" >/etc/apt/sources.list.d/opensips-cli.list
 apt install opensips
 aptitude install opensips-cli
-apt install opensips-mysql-module
+apt install opensips-mysql-module opensips-tls-module opensips-tls-openssl-module opensips-tlsmgm-module
 opensips-cli -x database create
 ```
 ### STEP 3 Download and install Edge Proxy Configuration
